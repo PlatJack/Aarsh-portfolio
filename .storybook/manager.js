@@ -4,8 +4,8 @@ import { addons } from '@storybook/addons';
 addons.setConfig({
   theme: {
     ...themes.dark,
-    // brandImage: 'https://Vinayakrai.netlify.app/icon.svg',
-    brandTitle: 'Vinayak Components',
-    brandUrl: 'https://Vinayakjain.cf',
+    // brandImage: 'https://Aarsh Desairai.netlify.app/icon.svg',
+    brandTitle: 'Aarsh Desai Components',
+    brandUrl: 'https://Aarsh Desaijain.cf',
   },
 });

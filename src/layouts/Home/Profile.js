@@ -12,7 +12,7 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
-import myImage from 'assets/profpic.jpg';
+import myImage from 'assets/aar.jpg';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
@@ -20,7 +20,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-  I&apos;m Vinayak, a versatile full stack web developer and designer pursuing a degree in Data Science and AI at{' '}
+  I&apos;m Aarsh Desai, a versatile full stack web developer and designer pursuing a degree in Data Science and AI at{' '}
   <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link>. 
   With expertise in the MERN stack and a keen eye for design, I craft seamless web experiences. 
   My passion extends to AI, specializing in machine learning, computer vision, and NLP.

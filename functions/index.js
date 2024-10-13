@@ -14,11 +14,11 @@ const ses = new aws.SES({
   region: 'us-east-1',
 });
 
-const ORIGINS = ['https://Vinayakrai.netlify.app', 'https://www.Vinayakrai.netlify.app'];
+const ORIGINS = ['https://Aarsh Desairai.netlify.app', 'https://www.Aarsh Desairai.netlify.app'];
 const MAX_EMAIL_LENGTH = 512;
 const MAX_MESSAGE_LENGTH = 4096;
-const EMAIL = 'hello@Vinayakrai.netlify.app';
-const FROM_EMAIL = 'mailbot@Vinayakrai.netlify.app';
+const EMAIL = 'hello@Aarsh Desairai.netlify.app';
+const FROM_EMAIL = 'mailbot@Aarsh Desairai.netlify.app';
 const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
 
 app.use(helmet());

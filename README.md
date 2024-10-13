@@ -1,6 +1,6 @@
 # Personal portfolio
 
-[![Site preview](/public/social-image1.png)](https://vinayakrai.netlify.app)
+[![Site preview](/public/social-image1.png)](https://Aarsh Desairai.netlify.app)
 
 This is my personal portfolio website to showcase some of my projects as well as my interests.
 
@@ -32,9 +32,9 @@ Once it's done start up a local server with:
 npm run dev
 ```
 
-## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/d07f3b07-070a-41d7-bf4e-becc24e52a11/deploy-status)](https://app.netlify.com/sites/vinayakrai/deploys)
+## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/d07f3b07-070a-41d7-bf4e-becc24e52a11/deploy-status)](https://app.netlify.com/sites/Aarsh Desairai/deploys)
 
-This site has been deployed on Netlify. You can visit it [here](https://vinayakrai.netlify.app)
+This site has been deployed on Netlify. You can visit it [here](https://Aarsh Desairai.netlify.app)
 
 ## License
 
