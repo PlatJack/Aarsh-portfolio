@@ -22,19 +22,19 @@ export const navLinks = [
   {
     label: 'Resume',
     pathname:
-      'https://drive.google.com/file/d/13b3J3UUOP4vskSP46B8KgxWOHXTXgTYj/view?usp=sharing',
+      'https://drive.google.com/file/d/1XItOMgx8EG5QbvImBHM1aO-QACHvpf8f/view?usp=drive_link',
   },
 ];
 
 export const socialLinks = [
   {
     label: 'Github',
-    url: 'https://github.com/Aarsh DesaiRai5',
+    url: 'https://github.com/PlatJack',
     icon: 'github',
   },
   {
     label: 'Linkedin',
-    url: 'https://www.linkedin.com/in/Aarsh Desai-rai-44773b159',
+    url: 'https://www.linkedin.com/in/aarsh-desai-499194175/',
     icon: 'linkedin',
   },
 ];

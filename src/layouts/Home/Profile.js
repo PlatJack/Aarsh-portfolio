@@ -12,7 +12,7 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
-import myImage from 'assets/aar.jpg';
+import myImage from 'assets/proff.jpg';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
@@ -20,22 +20,25 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-  I&apos;m Aarsh Desai, a versatile full stack web developer and designer pursuing a degree in Data Science and AI at{' '}
-  <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link>. 
-  With expertise in the MERN stack and a keen eye for design, I craft seamless web experiences. 
-  My passion extends to AI, specializing in machine learning, computer vision, and NLP.
+  I&apos;m Aarsh, a driven Data Science and AI student at{' '}
+  <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link>, 
+  passionate about machine learning, computer vision, and NLP. With a strong academic background 
+  and diverse research experience, I&apos;ve tackled projects ranging from speaker diarization 
+  to energy-efficient 3D CNN architectures for lung cancer nodule analysis.
 </Text>
 <Text className={styles.description} data-visible={visible} size="l" as="p">
-  I&apos;ve completed 4 internships, published 2 research papers, and was selected for the{' '}
-  <span style={{ fontWeight: 'bold' }}>Amazon Machine Learning Summer School &apos;24</span>. 
-  My research spans speaker diarization and metacognitive regulation in learning environments. 
-  As <span style={{ fontWeight: 'bold' }}>Tech Team Lead</span> for our DS&AI Society, 
-  I&apos;ve led projects from online platforms for the specially abled to AI-powered attention tracking systems.
+  I&apos;ve contributed to <span style={{ fontWeight: 'bold' }}>two research papers</span>, 
+  accepted at <span style={{ fontWeight: 'bold' }}>IEEE TALE 2024</span> and{' '}
+  <span style={{ fontWeight: 'bold' }}>T4E 2024</span>, showcasing my work on collaborative 
+  learning environments and socially shared metacognitive regulation. As{' '}
+  <span style={{ fontWeight: 'bold' }}>President of the Data Science and AI Society</span>, 
+  I&apos;ve led initiatives fostering innovation and knowledge sharing.
 </Text>
 <Text className={styles.description} data-visible={visible} size="l" as="p">
-  Proficient in Python, TensorFlow, and PyTorch, I&apos;m committed to solving real-world challenges 
-  with cutting-edge technology. Always eager to learn, I thrive in dynamic environments where 
-  I can push the boundaries of web development and AI.
+  Proficient in Python, TensorFlow, PyTorch, and various big data technologies, I&apos;m adept 
+  at developing AI solutions and optimizing deep learning models. I&apos;m always eager to apply 
+  my skills to real-world challenges, pushing the boundaries of AI and data science while 
+  maintaining a keen focus on energy efficiency and practical applications.
 </Text>
   </Fragment>
 );
