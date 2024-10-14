@@ -22,7 +22,7 @@ import { Experience } from 'layouts/Home/Experience';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Data Scientist'. 'AI Enthusiast', 'ML Engineer', 'Constant Learner'];
+const disciplines = ['Data Scientist', 'AI Enthusiast', 'ML Engineer', 'Constant Learner'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
