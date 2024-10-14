@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import IITB from "layouts/Jobs/IITB";
 import Vocab from "layouts/Jobs/vocab";
+import NITPY from "layouts/Jobs/NITPY";
 import IITM from "layouts/Jobs/IITM";
 import ArrowDown from 'assets/arrow-down.svg';
 import RouterLink from 'next/link';
@@ -25,6 +26,8 @@ export function Experience({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
         return <IITB />;
       case "Vocab":
         return <Vocab />;
+      case "NITPY":
+        return <NITPY />
       case "IITM":
         return <IITM />;
       default:
@@ -83,7 +86,7 @@ const CompaniesBar = (props) => {
   // Set initial positions for the bar and selection
   const [barPosition, setBarPosition] = React.useState(-10);
   const [barAbovePosition, setBarAbovePosition] = React.useState(1);
-  const [companyNameBackgroundColorGreen, setCompanyNameBackgroundColorGreen] = React.useState([true, false, false]);
+  const [companyNameBackgroundColorGreen, setCompanyNameBackgroundColorGreen] = React.useState([true, false, false, false]);
 
   const CompanyButton = (props) => (
     <button
@@ -93,7 +96,7 @@ const CompaniesBar = (props) => {
         props.setDescriptionJob(props.DescriptionJob);
 
         // Update the selected company state
-        const newCompanyBackgrounds = [false, false, false];
+        const newCompanyBackgrounds = [false, false, false, false];
         newCompanyBackgrounds[props.ButtonOrderOfcompanyNameBackgroundColorGreen] = true;
         setCompanyNameBackgroundColorGreen(newCompanyBackgrounds);
       }}
@@ -117,7 +120,7 @@ const CompaniesBar = (props) => {
           BarPosition={-10}
           BarAbovePosition={1}
           DescriptionJob="IITB"
-          CompanyNameBackgroundColorGreen={[true, false, false]} // IITB selected by default
+          CompanyNameBackgroundColorGreen={[true, false, false, false]} // IITB selected by default
           setDescriptionJob={props.setDescriptionJob}
         />
         <CompanyButton
@@ -126,16 +129,25 @@ const CompaniesBar = (props) => {
           BarPosition={40}
           BarAbovePosition={2}
           DescriptionJob="Vocab"
-          CompanyNameBackgroundColorGreen={[false, true, false]} // Vocab unselected
+          CompanyNameBackgroundColorGreen={[false, true, false, false]} // Vocab unselected
           setDescriptionJob={props.setDescriptionJob}
         />
         <CompanyButton
           ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-          CompanyName="IIT Madras - RBC"
-          BarPosition={80} // Adjust the position as needed
+          CompanyName="NIT Puducherry"
+          BarPosition={90}
           BarAbovePosition={3}
+          DescriptionJob="NITPY"
+          CompanyNameBackgroundColorGreen={[false, false, true, false]} // IITB selected by default
+          setDescriptionJob={props.setDescriptionJob}
+        />
+        <CompanyButton
+          ButtonOrderOfcompanyNameBackgroundColorGreen={3}
+          CompanyName="IIT Madras - RBC"
+          BarPosition={140} // Adjust the position as needed
+          BarAbovePosition={4}
           DescriptionJob="IITM"
-          CompanyNameBackgroundColorGreen={[false, false, true]} // IITM unselected by default
+          CompanyNameBackgroundColorGreen={[false, false, false, true]} // IITM unselected by default
           setDescriptionJob={props.setDescriptionJob}
         />
       </div>
