@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import IITB from "layouts/Jobs/IITB";
-import NITPY from "layouts/Jobs/vocab";
+import Vocab from "layouts/Jobs/vocab";
 import IITM from "layouts/Jobs/IITM";
 import ArrowDown from 'assets/arrow-down.svg';
 import RouterLink from 'next/link';
@@ -23,8 +23,8 @@ export function Experience({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
     switch (DescriptionJob) {
       case "IITB":
         return <IITB />;
-      case "NITPY":
-        return <NITPY />;
+      case "Vocab":
+        return <Vocab />;
       case "IITM":
         return <IITM />;
       default:
@@ -125,8 +125,8 @@ const CompaniesBar = (props) => {
           CompanyName="Vocab.AI"
           BarPosition={40}
           BarAbovePosition={2}
-          DescriptionJob="NITPY"
-          CompanyNameBackgroundColorGreen={[false, true, false]} // NITPY unselected
+          DescriptionJob="Vocab"
+          CompanyNameBackgroundColorGreen={[false, true, false]} // Vocab unselected
           setDescriptionJob={props.setDescriptionJob}
         />
         <CompanyButton
