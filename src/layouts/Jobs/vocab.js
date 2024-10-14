@@ -32,7 +32,7 @@ export default function Vocab() {
           MLOps Intern <span className={styles.company}>- Vocab.Ai</span>
           </span>
           {/* Date */}
-          <span className={styles.date}>Aug 2023 - May 2024</span>
+          <span className={styles.date}>August 2023 - August 2024</span>
         </div>
         <div className={styles.taskList}>
           {/* Tasks Description 1 */}
