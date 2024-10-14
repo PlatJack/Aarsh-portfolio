@@ -21,7 +21,7 @@ export default function EnsVision() {
         <div className={styles.titleContainer}>
           {/* Title */}
           <span className={styles.title}>
-          Research Intern <span className={styles.company}>- Robert Bosch Centre for Data Science and AI (IIT Madras)</span>
+          Research Intern <span className={styles.company}>- Robert Bosch Centre for Data Science and AI</span>
           </span>
           {/* Date */}
           <span className={styles.date}>Jun 2024 - Present</span>
