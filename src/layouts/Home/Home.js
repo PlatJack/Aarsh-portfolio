@@ -22,7 +22,7 @@ import { Experience } from 'layouts/Home/Experience';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['AI Enthusiast', 'Learner','Designer','Programmer','Data Scientist'];
+const disciplines = ['Data Scientist'. 'AI Enthusiast', 'ML Engineer', 'Constant Learner'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -74,9 +74,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of Aarsh Desai — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title="Developer + Data Scientist"
+        description="Portfolio of Aarsh Desai — Data Scientist"
       />
       <Intro
         id="intro"
