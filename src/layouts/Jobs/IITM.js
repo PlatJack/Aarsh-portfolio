@@ -32,7 +32,7 @@ export default function EnsVision() {
           Research Intern <span className={styles.company}>- Robert Bosch Centre for Data Science and AI</span>
           </span>
           {/* Date */}
-          <span className={styles.date}>Jun 2024 - Present</span>
+          <span className={styles.date}>June 2024 - Present</span>
         </div>
         <div className={styles.taskList}>
           {/* Tasks Description 1 */}
