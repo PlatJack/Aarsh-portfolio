@@ -140,7 +140,7 @@ export const Home = () => {
         title="Centio.Ai Conversational AI with Research and Task Automation"
         description="This is AI-driven platform that enables versatile chat interactions, task automation, and in-depth research capabilities. With features like Regular Chat, Assistant tasks, and document management, it streamlines workflows for enhanced productivity."
         buttonText="View project"
-        buttonLink="https://github.com/Aarsh DesaiRai5/Centio.AI"
+        buttonLink="https://github.com/VinayakRai5/Centio.AI"
         model={{
           type: 'laptop',
           alt: 'Visual description of the pipeline workflow',
