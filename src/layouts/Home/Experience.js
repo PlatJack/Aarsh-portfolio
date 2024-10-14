@@ -143,7 +143,7 @@ const CompaniesBar = (props) => {
         />
         <CompanyButton
           ButtonOrderOfcompanyNameBackgroundColorGreen={3}
-          CompanyName="IIT Madras - RBC"
+          CompanyName="IIT Madras"
           BarPosition={140} // Adjust the position as needed
           BarAbovePosition={4}
           DescriptionJob="IITM"
