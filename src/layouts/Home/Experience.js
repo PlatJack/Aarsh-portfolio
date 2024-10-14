@@ -27,7 +27,7 @@ export function Experience({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
       case "Vocab":
         return <Vocab />;
       case "NITPY":
-        return <NITPY />
+        return <NITPY />;
       case "IITM":
         return <IITM />;
       default:
