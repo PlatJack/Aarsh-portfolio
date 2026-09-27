@@ -37,8 +37,10 @@ export const viewport: Viewport = {
   ],
 };
 
-// Runs before paint so the saved or system theme applies without a flash
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})()`;
+// Runs before paint so the saved or system theme applies without a flash.
+// It also strips comments and whitespace that hosts inject into <head> (e.g. Netlify's
+// "hosted on Netlify" comment), which would otherwise break React hydration.
+const themeScript = `(function(){for(var n=document.head.firstChild;n;){var x=n.nextSibling;if(n.nodeType===8||(n.nodeType===3&&!n.textContent.trim()))n.remove();n=x}})();(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})()`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
