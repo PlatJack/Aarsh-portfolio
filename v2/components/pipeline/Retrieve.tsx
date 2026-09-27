@@ -31,7 +31,7 @@ function search(q: string) {
     .slice(0, 4);
 }
 
-const demoQuery = 'how do i reach aarsh?';
+const demoQuery = 'How do I reach Aarsh?';
 
 export function Retrieve() {
   const reduce = useReducedMotion();
@@ -79,7 +79,7 @@ export function Retrieve() {
               setTyping(false);
               setQuery(e.target.value);
             }}
-            placeholder="search papers, experience, contact…"
+            placeholder="Search papers, experience, contact…"
             className={`w-full bg-transparent text-lg outline-none placeholder:text-faint ${typing ? 'caret' : ''}`}
             aria-label="Search the portfolio"
           />
