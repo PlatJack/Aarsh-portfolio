@@ -126,6 +126,16 @@ body {
   --line: #1c1f23;
   --accent: #22d3ee;
   --accent-soft: #0b2a31;
+  /* Tailwind's color tokens resolve where they're declared, so re-declare them here
+     or they'd keep the root (system light/dark) values */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   background: var(--bg);
   color: var(--fg);
   color-scheme: dark;

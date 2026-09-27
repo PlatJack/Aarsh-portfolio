@@ -11,7 +11,7 @@ function Node({ value, depth }: { value: Value; depth: number }) {
   if (typeof value === 'boolean') return <span className="text-violet">{String(value)}</span>;
 
   if (Array.isArray(value)) {
-    const inline = value.every(v => typeof v !== 'object' || v === null) && JSON.stringify(value).length < 28;
+    const inline = value.every(v => typeof v !== 'object' || v === null) && JSON.stringify(value).length < 20;
     if (inline) {
       return (
         <>
