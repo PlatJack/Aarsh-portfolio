@@ -4,6 +4,7 @@ import {
   achievements,
   education,
   experience,
+  leadership,
   profile,
   projects,
   publications,
@@ -188,7 +189,6 @@ function Work() {
                     {i === 0 && <span className="text-faint"> · {job.location}</span>}
                   </div>
                 ))}
-                {job.mentors && <div className="text-faint">Mentored by {job.mentors}</div>}
               </div>
               <ul className="mt-4 space-y-2.5 text-[15px] leading-relaxed text-muted">
                 {job.points.map(p => (
@@ -249,6 +249,7 @@ function Research() {
                 </Title>
                 <p className="mt-2 text-sm leading-relaxed text-faint">{highlightMe(pub.authors)}</p>
                 <p className="mt-1 text-sm italic text-faint">{pub.venue}</p>
+                {pub.note && <p className="mt-1 font-mono text-xs text-faint">{pub.note}</p>}
               </div>
             </li>
           );
@@ -260,8 +261,8 @@ function Research() {
 
 function Projects() {
   return (
-    <Section id="projects" label="Selected projects">
-      <div className="grid gap-4 sm:grid-cols-2">
+    <Section id="projects" label="Project">
+      <div className="grid gap-4">
         {projects.map(p => (
           <a
             key={p.title}
@@ -274,12 +275,16 @@ function Projects() {
               <h3 className="font-medium leading-snug">{p.title}</h3>
               <Arrow className="mt-1 shrink-0 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
             </div>
-            {p.highlight && (
-              <span className="mt-2 w-fit rounded-full bg-accent-soft px-2 py-0.5 text-[11px] font-medium text-accent">
-                {p.highlight}
-              </span>
+            <p className="mt-3 text-sm leading-relaxed text-muted">{p.description}</p>
+            {p.points && (
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted">
+                {p.points.map(pt => (
+                  <li key={pt} className="relative pl-4 before:absolute before:left-0 before:top-[0.7em] before:size-1 before:rounded-full before:bg-faint">
+                    {pt}
+                  </li>
+                ))}
+              </ul>
             )}
-            <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{p.description}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {p.tags.map(t => (
                 <Tag key={t}>{t}</Tag>
@@ -330,7 +335,7 @@ function Skills() {
 
 function Education() {
   return (
-    <Section id="education" label="Education">
+    <Section id="education" label="Education & leadership">
       <ul className="space-y-6">
         {education.map(e => (
           <li key={e.school} className="grid gap-1 sm:grid-cols-[150px_1fr] sm:gap-8">
@@ -340,6 +345,15 @@ function Education() {
               <div className="mt-1 text-sm text-muted">
                 {e.degree} <span className="text-faint">· {e.detail}</span>
               </div>
+            </div>
+          </li>
+        ))}
+        {leadership.map(l => (
+          <li key={l.org} className="grid gap-1 sm:grid-cols-[150px_1fr] sm:gap-8">
+            <div className="font-mono text-xs leading-6 text-faint">{l.period}</div>
+            <div>
+              <div className="font-medium">{l.role}</div>
+              <div className="mt-1 text-sm text-muted">{l.org}</div>
             </div>
           </li>
         ))}

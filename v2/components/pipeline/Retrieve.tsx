@@ -66,9 +66,7 @@ export function Retrieve() {
   return (
     <section id="retrieve" className="relative mx-auto max-w-6xl scroll-mt-20 px-5 pb-20 pt-20 sm:pt-28">
       <div className="pointer-events-none absolute left-1/2 top-1/3 -z-10 size-[600px] -translate-x-1/2 rounded-full bg-rose/[0.07] blur-[140px]" aria-hidden />
-      <StageHeader index={5} stage="Retrieve" accent="#fb7185" title={<>Query the index.</>}>
-        Everything above is indexed. Ask anything, or just say hello.
-      </StageHeader>
+      <StageHeader index={5} stage="Retrieve" accent="#fb7185" title={<>Query the index.</>} />
 
       <div ref={ref} className="reveal mx-auto max-w-3xl">
         <label className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-4 shadow-[0_0_80px_-30px_#fb7185] focus-within:border-rose/50">

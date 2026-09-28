@@ -54,10 +54,7 @@ export function Evaluate() {
 
   return (
     <section id="evaluate" className="relative mx-auto max-w-6xl scroll-mt-20 px-5 py-20 sm:py-28">
-      <StageHeader index={4} stage="Evaluate" accent="#a3e635" title={<>What the work measured.</>}>
-        Results from projects I’ve been part of, each against its own baseline. Nearly all of it was team work,
-        with colleagues and mentors who taught me a lot.
-      </StageHeader>
+      <StageHeader index={4} stage="Evaluate" accent="#a3e635" title={<>What the work measured.</>} />
 
       <div ref={table} className="reveal rounded-3xl border border-line bg-surface/70 px-5 sm:px-8">
         <div className="hidden grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)_72px] gap-x-6 border-b border-line py-3 font-mono text-[10.5px] uppercase tracking-wider text-faint sm:grid">

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from 'motion/react';
 import { useRef, useState } from 'react';
-import { experience, education, type Job } from '@/lib/data';
+import { experience, education, leadership, type Job } from '@/lib/data';
 import { Json } from './Json';
 import { StageHeader } from './StageHeader';
 
@@ -11,7 +11,6 @@ function toRecord(job: Job) {
     org: job.company,
     roles: job.roles.map(r => `${r.title} (${r.period.replace(' — ', '–')})`),
     location: job.location,
-    ...(job.mentors ? { mentors: job.mentors } : {}),
     entities: job.tags,
   };
 }
@@ -60,7 +59,6 @@ function Record({ job, index, mode }: { job: Job; index: number; mode: 'rendered
                 </span>
               ))}
             </div>
-            {job.mentors && <div className="mt-1 text-sm text-faint">with {job.mentors}</div>}
             <ul className="mt-5 space-y-2.5 text-[15px] leading-relaxed text-muted">
               {job.points.map(p => (
                 <li key={p} className="grid grid-cols-[14px_1fr] gap-2">
@@ -91,10 +89,7 @@ export function Extract() {
 
   return (
     <section id="extract" className="relative mx-auto max-w-6xl scroll-mt-20 px-5 py-20 sm:py-28">
-      <StageHeader index={2} stage="Extract" accent="#fbbf24" title={<>Structured from five labs &amp; teams.</>}>
-        From research groups at IIT Bombay and IIT Madras to production Document AI at Nanonets. Each record is
-        parsed into its fields.
-      </StageHeader>
+      <StageHeader index={2} stage="Extract" accent="#fbbf24" title={<>Structured from five labs &amp; teams.</>} />
 
       <div className="mb-8 flex justify-end">
         <div role="tablist" aria-label="View mode" className="inline-flex rounded-full border border-line bg-surface p-1 font-mono text-xs">
@@ -136,6 +131,15 @@ export function Extract() {
             <div className="mt-1 text-sm text-muted">
               {e.degree} · <span className="text-fg">{e.detail}</span>
             </div>
+          </div>
+        ))}
+        {leadership.map(l => (
+          <div key={l.org} className="spot rounded-2xl border border-line bg-surface/60 p-5">
+            <div className="font-mono text-[10.5px] uppercase tracking-wider text-faint">
+              <span className="text-amber">leadership</span> · {l.period}
+            </div>
+            <div className="mt-2 font-medium">{l.role}</div>
+            <div className="mt-1 text-sm text-muted">{l.org}</div>
           </div>
         ))}
       </div>

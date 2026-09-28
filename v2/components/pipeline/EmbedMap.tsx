@@ -38,10 +38,12 @@ export function itemPositions() {
       const k = (seen[item.cluster] = (seen[item.cluster] ?? 0) + 1) - 1;
       // Spread nodes evenly around the cluster centre, staggering height so labels don't collide
       const angle = (k / n) * Math.PI * 2 + rand() * 0.3;
-      const radius = n === 1 ? 0.5 : 1.1 + (n > 4 ? 0.5 : 0) + rand() * 0.25;
+      const radius = n === 1 ? 0.5 : 1.1 + (n > 4 ? 0.5 : 0) + (n > 6 ? 0.3 : 0) + rand() * 0.25;
+      // Distinct heights per node so labels never share a row
+      const height = n > 1 ? (k / (n - 1) - 0.5) * (n > 4 ? 2.6 : 1.7) : 0;
       const pos = new THREE.Vector3(
         c.center[0] + Math.cos(angle) * radius,
-        c.center[1] + ((k % 3) - 1) * 0.75 + (rand() - 0.5) * 0.2,
+        c.center[1] + height + (rand() - 0.5) * 0.15,
         c.center[2] + Math.sin(angle) * radius
       );
       return [item.id, pos];

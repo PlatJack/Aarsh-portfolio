@@ -8,12 +8,11 @@ export const profile = {
   email: 'desaiaarsh4@gmail.com',
   resume: '/Aarsh_Desai_Resume.pdf',
   siteUrl: 'https://platjack.netlify.app',
-  tagline:
-    'I build multimodal and agentic AI systems that hold up on messy, real-world documents.',
+  tagline: 'I work on vision-language models and agents that extract structured data from messy, real-world documents.',
   about: [
-    'I work on Document AI at Nanonets. I build agentic memory pipelines that learn from user feedback, and I fine-tune vision-language models for enterprise-grade extraction.',
-    'Before that I did research at IIT Bombay, IIT Madras and NIT Puducherry, on speaker diarization, multimodal emotion recognition and energy-efficient medical imaging. I was lucky to learn from wonderful mentors there, and our work turned into four peer-reviewed papers.',
-    'I graduated from IIIT Dharwad in 2025 with a BTech in Data Science & AI. Outside work I still enjoy a good competitive programming problem.',
+    'I’m a Deep Learning Engineer at Nanonets. I work on memory for data-extraction agents, and on multimodal pipelines that pull structured data out of noisy documents.',
+    'Before that I was a research intern at IIT Bombay, IIT Madras and NIT Puducherry, working on speaker diarization, emotion recognition, forecasting and efficient medical imaging. That work led to four peer-reviewed papers.',
+    'I graduated from IIIT Dharwad in 2025 with a BTech in Data Science & AI. While there I led the Data Science and AI Society and the quiz club.',
   ],
   socials: [
     { label: 'GitHub', url: 'https://github.com/PlatJack' },
@@ -27,7 +26,6 @@ export type Job = {
   url?: string;
   roles: { title: string; period: string }[];
   location: string;
-  mentors?: string;
   points: string[];
   tags: string[];
 };
@@ -42,33 +40,31 @@ export const experience: Job[] = [
     ],
     location: 'Bengaluru',
     points: [
-      'Architected a multi-tiered agentic memory pipeline driven by real-time user feedback, eliminating instruction conflicts and letting agents adapt to evolving logic and edge-case rules.',
-      'Fine-tuned domain-specific multimodal models with robust training pipelines that minimise hallucinations and maximise extraction quality on noisy, real-world inputs.',
-      'Led high-priority precision initiatives, diagnosing failure cases and shipping tailored model improvements to meet strict enterprise SLAs.',
-      'Fine-tuned foundation models (SigLIP, Qwen2.5-VL) with contrastive learning for document clustering and retrieval. Designed a custom vision embedding model that beat SOTA by 30% on retrieval.',
-      'Built a human-in-the-loop annotation pipeline with active learning and custom UIs, speeding up high-quality label acquisition by 70%.',
+      'Designed a multi-layer memory framework for data-extraction agents that turns real-time user feedback and historical data patterns into rules by measuring user intent. It flags conflicting instructions and lets agents adapt as business logic and edge cases change.',
+      'Improved domain-specific multimodal pipelines for structured data extraction from documents, focusing on latency, cost and hallucinations on noisy real-world inputs.',
+      'Led precision work for enterprise customers: diagnosed why certain methods kept failing and shipped targeted fixes to meet strict accuracy SLAs across workflows.',
+      'As an intern, fine-tuned SigLIP and Qwen2.5-VL encoders with contrastive learning for clustering and retrieval embeddings. The final model outperformed SOTA baselines by 30% on highly unstructured layouts and templates.',
+      'Built a human-in-the-loop annotation framework combining active learning with custom labelling UIs, making high-quality label collection 70% faster.',
     ],
-    tags: ['Agentic AI', 'VLMs', 'Qwen2.5-VL', 'SigLIP', 'Contrastive Learning', 'PyTorch'],
+    tags: ['Agents', 'Memory', 'VLMs', 'SigLIP', 'Qwen2.5-VL', 'Contrastive Learning'],
   },
   {
     company: 'Robert Bosch Centre for Data Science & AI, IIT Madras',
     roles: [{ title: 'Research Intern', period: 'Jun 2024 — Nov 2024' }],
     location: 'Remote',
-    mentors: 'Dr. Gokul S Krishnan & Dr. Sanjay Bankapur',
     points: [
-      'Engineered a multimodal stock prediction system combining transformer-based social sentiment, financial news and technical indicators for swing trading.',
-      'Optimised time-series forecasting and feature-selection pipelines for a 25% accuracy gain over baseline models.',
+      'Worked on a multimodal stock prediction system for swing trading that used transformer-based sentiment from social media and financial news along with technical indicators.',
+      'Tuned the time-series forecasting models and feature selection, improving prediction accuracy by 25% over historical price baselines.',
     ],
-    tags: ['Transformers', 'Time Series', 'Multimodal'],
+    tags: ['Transformers', 'Time Series', 'Sentiment'],
   },
   {
     company: 'Centre for Educational Technology, IIT Bombay',
     roles: [{ title: 'Research Intern', period: 'May 2023 — Sep 2024' }],
     location: 'Mumbai',
-    mentors: 'Dr. Ashwin T S & Dr. Ramkumar Rajendran',
     points: [
-      'Developed AffectBots, a multimodal (audio, video, text) tutoring system that analysed 100+ hours of student engagement with 88% emotion-recognition accuracy.',
-      'Built speaker diarization with PyAnnote and Whisper for Indo-English classrooms across 140+ hours of interactions, outperforming existing models by 65%. Published at IEEE TALE 2024, where it received the Best Student Paper award.',
+      'Built a speaker diarization pipeline with PyAnnote and Whisper for Indo-English classroom conversations (140+ hours). It outperformed existing SOTA models by 65% and won Best Student Paper at IEEE TALE 2024.',
+      'Worked on AffectBots, a web-based tutoring system that recognises student emotion from video and adjusts its teaching accordingly.',
     ],
     tags: ['Whisper', 'PyAnnote', 'Speech', 'Affective Computing'],
   },
@@ -77,21 +73,24 @@ export const experience: Job[] = [
     roles: [{ title: 'MLOps Intern', period: 'Aug 2023 — Aug 2024' }],
     location: 'Remote',
     points: [
-      'Built a full-stack pipeline ingesting 100,000+ customer-service conversations via Google Business APIs at 98% reliability, with a web UI tracking behavioural metrics.',
-      'Fine-tuned LLaMA 2 and GPT-3.5 Turbo with LangChain for sentiment, topic modelling and conversation scoring, improving accuracy by 8%.',
+      'Built a pipeline for ingesting customer-service chats in real time through Google Business APIs, and a dashboard showing how CS agent behaviour affects TAT and CSAT scores.',
     ],
-    tags: ['LLMs', 'LangChain', 'MLOps'],
+    tags: ['Data Pipelines', 'Dashboards', 'MLOps'],
   },
   {
     company: 'Dept. of CSE, NIT Puducherry',
     roles: [{ title: 'Deep Learning Intern', period: 'Dec 2023 — Jan 2024' }],
     location: 'Karaikal',
-    mentors: 'Dr. Girish G N & Dr. Sanjay Bankapur',
     points: [
-      'Optimised lung-nodule classification and segmentation models on LIDC-IDRI, cutting energy consumption by 77% with near-zero accuracy loss via pruning and quantization.',
+      'Cut the energy use of lung-nodule classification and segmentation models so they can run on edge devices in low-resource areas. Compared depthwise separable CNNs, pruning and quantization on LIDC-IDRI with minimal accuracy loss.',
     ],
-    tags: ['Medical Imaging', 'Quantization', 'Pruning'],
+    tags: ['Medical Imaging', 'Edge AI', 'Quantization', 'Pruning'],
   },
+];
+
+export const leadership = [
+  { role: 'President', org: 'Data Science and AI Society, IIIT Dharwad', period: 'Oct 2023 — Oct 2024' },
+  { role: 'Club Lead', org: 'InQuizitive, the Quiz Club of IIIT Dharwad', period: 'Oct 2022 — Dec 2023' },
 ];
 
 export type Publication = {
@@ -102,6 +101,7 @@ export type Publication = {
   year: number;
   url?: string;
   award?: string;
+  note?: string;
 };
 
 export const publications: Publication[] = [
@@ -109,10 +109,12 @@ export const publications: Publication[] = [
     title:
       'Exploring Emotional Trajectories through Valence and Arousal in Open-Ended Math Learning Environments',
     authors:
-      'Desai, A., Kartik, N. V. J. K., Gupta, P., M., Vinayak, Vanahalli, M. K., Rajendran, R., T S, A. & Biswas, G.',
+      'Desai, A., Kartik, N. V. J. K., Gupta, P., M, V., Vanahalli, M. K., Rajendran, R., T S, A. & Biswas, G.',
     venue: 'International Conference on Technology for Education',
     venueShort: 'T4E 2025',
     year: 2025,
+    url: 'https://par.nsf.gov/biblio/10660268',
+    note: 'NSF Award 2112635',
   },
   {
     title:
@@ -150,82 +152,61 @@ export const publications: Publication[] = [
 export type Project = {
   title: string;
   description: string;
+  points?: string[];
   tags: string[];
   url?: string;
-  highlight?: string;
+  date?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: 'Online Schooling for the Specially Abled',
+    title: 'Attention and Emotion Sensing for Online Learning',
     description:
-      'Real-time computer vision pipeline that reads facial expressions and gaze to adapt learning content. Containerised and deployed on AWS, built end-to-end in a 48-hour sprint.',
-    tags: ['TensorFlow', 'OpenCV', 'Streamlit', 'Docker', 'AWS'],
+      'A real-time webcam tool that flags drowsy, distracted or disengaged students for teachers of students with special needs.',
+    points: [
+      'Uses facial landmarks to detect and track head pose, eye closure and gaze.',
+      'Trained a CNN from scratch on FER-2013, reaching 62.7% accuracy across 7 emotions.',
+      'Later brought the idea to a study platform’s PDF viewer with in-browser gaze tracking and an alert when the reader looks away. Everything runs offline, so video never leaves the device.',
+    ],
+    tags: ['TensorFlow', 'OpenCV', 'dlib', 'WebGazer.js'],
     url: 'https://github.com/PlatJack/DRS-Hackathon-2',
-    highlight: '1st of 50 teams',
-  },
-  {
-    title: 'Emotional Monitoring of Crypto Traders',
-    description:
-      'A trading platform that monitors traders’ emotional state and delivers personalised interventions to support better decision-making.',
-    tags: ['Affective Computing', 'Web', 'Hackathon'],
-    url: 'https://github.com/hackfest-dev/HF24-Nexus',
-  },
-  {
-    title: 'Centio.AI',
-    description:
-      'Conversational AI platform with regular chat, assistant-style task automation, in-depth research and document management.',
-    tags: ['LLMs', 'Agents', 'RAG'],
-    url: 'https://github.com/VinayakRai5/Centio.AI',
-  },
-  {
-    title: 'Alumni Connect',
-    description:
-      'Flutter app for the career cell at IIIT Dharwad with social image sharing, job postings and in-app applications for alumni engagement.',
-    tags: ['Flutter', 'Mobile'],
-    url: 'https://github.com/NVJKKartik/Alumni_connect',
+    date: 'May 2023',
   },
 ];
 
 export const achievements = [
   {
     title: 'Director’s Gold Medal',
-    detail: 'Best Outgoing Student, IIIT Dharwad, Batch of 2025',
+    detail: 'Best all-round graduating student, batch of 2025, IIIT Dharwad',
   },
   {
     title: 'Best Student Paper',
-    detail: 'IEEE TALE 2024, for our work on speaker diarization in classrooms',
-  },
-  {
-    title: 'Competitive programming',
-    detail: 'Rank 19 in CodeChef Starters 57 · peak 4★ on CodeChef · top 3% on LeetCode',
+    detail: 'IEEE TALE 2024',
   },
   {
     title: 'Ganglia Tech Collegiate Hackathon',
-    detail: '1st place, with a team project on accessible online schooling',
+    detail: '1st place',
   },
-]
+  {
+    title: 'Competitive programming',
+    detail: 'Global rank 19 in CodeChef Starters 57 · peak 4★ on CodeChef · top 3% on LeetCode',
+  },
+];
 
 export const skills: { group: string; items: string[] }[] = [
+  { group: 'Focus Areas', items: ['Vision-Language Models', 'Agentic Systems', 'Multimodal Learning'] },
   {
-    group: 'Core',
-    items: ['Agentic AI', 'Vision-Language Models', 'Multimodal AI', 'Document AI', 'MLOps'],
+    group: 'ML & Deep Learning',
+    items: ['PyTorch', 'TensorFlow', 'Hugging Face Transformers', 'LangChain', 'LangGraph', 'OpenCV'],
   },
-  {
-    group: 'AI & Deep Learning',
-    items: ['PyTorch', 'TensorFlow', 'HuggingFace', 'LangChain', 'OpenAI API', 'OpenCV', 'Keras'],
-  },
-  {
-    group: 'Optimization & Serving',
-    items: ['Quantization', 'Pruning', 'vLLM', 'Triton', 'FastAPI', 'Flask'],
-  },
+  { group: 'Training & Serving', items: ['vLLM', 'Triton Inference Server', 'FastAPI', 'Quantization', 'Pruning'] },
   {
     group: 'Languages & Data',
     items: ['Python', 'C/C++', 'Go', 'SQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Cassandra', 'Elasticsearch'],
   },
   {
-    group: 'Cloud & DevOps',
-    items: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'GitHub Actions', 'Argo CD', 'Grafana'],
+    group: 'Infrastructure',
+    items: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'Jenkins', 'Argo CD', 'GitHub Actions', 'Grafana'],
   },
 ];
 
@@ -233,7 +214,7 @@ export const education = [
   {
     school: 'Indian Institute of Information Technology, Dharwad',
     degree: 'BTech, Data Science & Artificial Intelligence',
-    detail: 'CGPA 9.19 · Director’s Gold Medal',
+    detail: 'CGPA 9.19',
     period: '2021 — 2025',
   },
   {
@@ -255,24 +236,21 @@ export type Metric = {
 };
 
 export const metrics: Metric[] = [
-  { label: 'Document retrieval vs SOTA', context: 'Custom vision embedding model · Nanonets', value: 30, display: '+30%', direction: 'up' },
-  { label: 'Label acquisition speed', context: 'Human-in-the-loop + active learning · Nanonets', value: 70, display: '+70%', direction: 'up' },
-  { label: 'Speaker diarization vs existing', context: 'Whisper + PyAnnote · IIT Bombay', value: 65, display: '+65%', direction: 'up' },
-  { label: 'Energy consumption', context: 'Lung-nodule CNNs, near-zero accuracy loss · NIT Puducherry', value: 77, display: '−77%', direction: 'down' },
-  { label: 'Emotion recognition accuracy', context: 'AffectBots, 100+ hrs multimodal data · IIT Bombay', value: 88, display: '88%', direction: 'abs' },
-  { label: 'Ingestion reliability', context: '100,000+ conversations · Vocab.Ai', value: 98, display: '98%', direction: 'abs' },
-  { label: 'Forecast accuracy vs baseline', context: 'Multimodal stock prediction · IIT Madras', value: 25, display: '+25%', direction: 'up' },
+  { label: 'Retrieval vs SOTA baselines', context: 'Fine-tuned SigLIP / Qwen2.5-VL encoders · Nanonets', value: 30, display: '+30%', direction: 'up' },
+  { label: 'Label collection speed', context: 'Human-in-the-loop + active learning · Nanonets', value: 70, display: '+70%', direction: 'up' },
+  { label: 'Speaker diarization vs SOTA', context: 'PyAnnote + Whisper, 140+ hrs of classroom audio · IIT Bombay', value: 65, display: '+65%', direction: 'up' },
+  { label: 'Forecast accuracy vs price baselines', context: 'Multimodal stock prediction · IIT Madras', value: 25, display: '+25%', direction: 'up' },
 ];
 
 export type Cluster = { id: string; label: string; color: string; center: [number, number, number] };
 
 export const clusters: Cluster[] = [
   { id: 'docai', label: 'Document AI & VLMs', color: '#22d3ee', center: [-4.6, 0.9, 0.6] },
-  { id: 'agents', label: 'LLMs & Agents', color: '#a78bfa', center: [-0.8, 2.6, -1.6] },
+  { id: 'agents', label: 'Agents & Data Pipelines', color: '#a78bfa', center: [-0.8, 2.6, -1.6] },
   { id: 'affect', label: 'Speech & Affective AI', color: '#fb7185', center: [3.8, 1.3, 0.4] },
   { id: 'efficient', label: 'Efficient & Medical DL', color: '#a3e635', center: [0.9, -2.9, 1.6] },
-  { id: 'forecast', label: 'Time Series', color: '#fbbf24', center: [-3.6, -2.5, -1.2] },
-  { id: 'cp', label: 'Competition & Honours', color: '#e2e8f0', center: [4.4, -1.5, -1.0] },
+  { id: 'forecast', label: 'Time Series', color: '#fbbf24', center: [4.6, -1.9, -0.8] },
+  { id: 'cp', label: 'Honours & Community', color: '#e2e8f0', center: [-3.9, -2.4, -1.0] },
 ];
 
 export type MapItem = {
@@ -286,22 +264,25 @@ export type MapItem = {
 };
 
 export const mapItems: MapItem[] = [
-  { id: 'nanonets', label: 'Nanonets', kind: 'work', cluster: 'docai', detail: 'Deep Learning Engineer. Agentic memory pipelines and fine-tuned VLMs for enterprise document extraction.', url: 'https://nanonets.com' },
-  { id: 'embed', label: 'Vision embeddings', kind: 'project', cluster: 'docai', detail: 'Contrastive fine-tuning of SigLIP / Qwen2.5-VL; a custom model beating SOTA by 30% on document retrieval.' },
-  { id: 'hil', label: 'HIL annotation', kind: 'project', cluster: 'docai', detail: 'Active-learning annotation pipeline with custom UIs: 70% faster high-quality labels.' },
-  { id: 'memory', label: 'Agentic memory', kind: 'project', cluster: 'agents', detail: 'Multi-tiered memory driven by real-time user feedback, so agents adapt to evolving rules without instruction conflicts.' },
-  { id: 'vocab', label: 'Vocab.Ai', kind: 'work', cluster: 'agents', detail: 'MLOps Intern. Fine-tuned LLaMA 2 & GPT-3.5 for conversation scoring over 100k+ conversations.' },
-  { id: 'centio', label: 'Centio.AI', kind: 'project', cluster: 'agents', detail: 'Conversational AI with task automation, research and document management.', url: 'https://github.com/VinayakRai5/Centio.AI' },
+  { id: 'nanonets', label: 'Nanonets', kind: 'work', cluster: 'docai', detail: 'Deep Learning Engineer. Memory for data-extraction agents and multimodal extraction pipelines.', url: 'https://nanonets.com' },
+  { id: 'extraction', label: 'Extraction pipelines', kind: 'project', cluster: 'docai', detail: 'Domain-specific multimodal pipelines for structured data extraction, tuned for latency, cost and hallucinations on noisy inputs.' },
+  { id: 'embed', label: 'Vision embeddings', kind: 'project', cluster: 'docai', detail: 'Contrastive fine-tuning of SigLIP and Qwen2.5-VL encoders; 30% better than SOTA baselines on unstructured layouts.' },
+  { id: 'hil', label: 'HIL annotation', kind: 'project', cluster: 'docai', detail: 'Active learning with custom labelling UIs, making high-quality label collection 70% faster.' },
+  { id: 'memory', label: 'Agent memory', kind: 'project', cluster: 'agents', detail: 'Multi-layer memory that turns user feedback and historical patterns into rules, flags conflicting instructions, and adapts as business logic changes.' },
+  { id: 'vocab', label: 'Vocab.Ai', kind: 'work', cluster: 'agents', detail: 'MLOps Intern. Real-time ingestion of customer-service chats and a dashboard linking agent behaviour to TAT and CSAT.' },
   { id: 'tale', label: 'TALE 2024 · Best Paper', kind: 'paper', cluster: 'affect', gold: true, detail: 'Advancing Speaker Diarization With Whisper Speech Recognition for Different Learning Environments.', url: 'https://doi.org/10.1109/TALE62452.2024.10834319' },
-  { id: 't4e25', label: 'T4E 2025', kind: 'paper', cluster: 'affect', detail: 'Exploring Emotional Trajectories through Valence and Arousal in Open-Ended Math Learning Environments.' },
+  { id: 't4e25', label: 'T4E 2025', kind: 'paper', cluster: 'affect', detail: 'Exploring Emotional Trajectories through Valence and Arousal in Open-Ended Math Learning Environments.', url: 'https://par.nsf.gov/biblio/10660268' },
   { id: 't4e24', label: 'T4E 2024', kind: 'paper', cluster: 'affect', detail: 'Unlocking the Triggers: automating identification of SSMR triggers in collaborative problem-solving.', url: 'https://doi.org/10.1007/978-981-95-1734-3_6' },
-  { id: 'iitb', label: 'IIT Bombay', kind: 'work', cluster: 'affect', detail: 'Research Intern. AffectBots multimodal tutoring and Indo-English speaker diarization.' },
-  { id: 'schooling', label: 'Accessible schooling', kind: 'project', cluster: 'affect', detail: 'Gaze + expression CV pipeline adapting content for specially-abled students. 1st of 50 teams.', url: 'https://github.com/PlatJack/DRS-Hackathon-2' },
-  { id: 'crypto', label: 'Trader emotion monitor', kind: 'project', cluster: 'affect', detail: 'Monitors traders’ emotional state and delivers personalised interventions.', url: 'https://github.com/hackfest-dev/HF24-Nexus' },
+  { id: 'iitb', label: 'IIT Bombay', kind: 'work', cluster: 'affect', detail: 'Research Intern. Speaker diarization for Indo-English classrooms and the AffectBots tutoring system.' },
+  { id: 'affectbots', label: 'AffectBots', kind: 'project', cluster: 'affect', detail: 'Web-based tutoring system that recognises student emotion from video and adjusts its teaching.' },
+  { id: 'attention', label: 'Attention sensing', kind: 'project', cluster: 'affect', detail: 'Webcam tool that flags drowsy or distracted students from head pose, eye closure and gaze. Runs fully offline.', url: 'https://github.com/PlatJack/DRS-Hackathon-2' },
   { id: 'indiscon', label: 'INDISCON 2025', kind: 'paper', cluster: 'efficient', detail: 'Energy-Efficient Depthwise Separable CNNs for Classification and Segmentation of Lung Cancer Nodules.', url: 'https://doi.org/10.1109/INDISCON66021.2025.11254247' },
-  { id: 'nitpy', label: 'NIT Puducherry', kind: 'work', cluster: 'efficient', detail: 'Deep Learning Intern. Pruning + quantization for 77% lower energy on LIDC-IDRI.' },
-  { id: 'iitm', label: 'IIT Madras', kind: 'work', cluster: 'forecast', detail: 'Research Intern at RBCDSAI. Multimodal stock prediction with sentiment, news and technicals.' },
-  { id: 'codechef', label: 'CodeChef #19 global', kind: 'award', cluster: 'cp', detail: 'Global rank 19 in CodeChef Starters 57; peak 4★ rating.' },
-  { id: 'leetcode', label: 'LeetCode top 3%', kind: 'award', cluster: 'cp', detail: 'Ranked within the top 3% of global participants.' },
-  { id: 'gold', label: 'Director’s Gold Medal', kind: 'award', cluster: 'cp', gold: true, detail: 'Best Outgoing Student, IIIT Dharwad, Batch of 2025.' },
+  { id: 'nitpy', label: 'NIT Puducherry', kind: 'work', cluster: 'efficient', detail: 'Deep Learning Intern. Lower-energy lung-nodule models for edge devices in low-resource areas.' },
+  { id: 'iitm', label: 'IIT Madras', kind: 'work', cluster: 'forecast', detail: 'Research Intern at RBCDSAI. Multimodal stock prediction with sentiment, news and technical indicators.' },
+  { id: 'gold', label: 'Director’s Gold Medal', kind: 'award', cluster: 'cp', gold: true, detail: 'Best all-round graduating student, batch of 2025, IIIT Dharwad.' },
+  { id: 'codechef', label: 'CodeChef #19', kind: 'award', cluster: 'cp', detail: 'Global rank 19 in CodeChef Starters 57; peak 4★ rating.' },
+  { id: 'leetcode', label: 'LeetCode top 3%', kind: 'award', cluster: 'cp', detail: 'Top 3% of global participants.' },
+  { id: 'hackathon', label: 'Ganglia Tech · 1st', kind: 'award', cluster: 'cp', detail: '1st place at the Ganglia Tech Collegiate Hackathon.' },
+  { id: 'society', label: 'DS & AI Society', kind: 'work', cluster: 'cp', detail: 'President of the Data Science and AI Society, IIIT Dharwad (2023–24).' },
+  { id: 'quiz', label: 'InQuizitive', kind: 'work', cluster: 'cp', detail: 'Club Lead of InQuizitive, the quiz club of IIIT Dharwad (2022–23).' },
 ];

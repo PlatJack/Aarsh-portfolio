@@ -3,7 +3,7 @@
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { Json, type JsonValue } from './Json';
-import { profile } from '@/lib/data';
+import { mapItems, profile } from '@/lib/data';
 
 type Region = {
   id: string;
@@ -49,7 +49,7 @@ const regions: Record<string, Region> = {
     conf: 0.94,
     color: '#fb7185',
     delay: 2.0,
-    extract: { hobbies: ['competitive programming', 'hackathons'], platforms: 'CodeChef, LeetCode' },
+    extract: { president: 'DS & AI Society', club_lead: 'InQuizitive', also: 'competitive programming' },
   },
   stamp: {
     id: 'stamp',
@@ -159,11 +159,11 @@ function Paper({ active, onHover }: { active: string; onHover: (id: string | nul
       <div className="grid grid-cols-[1fr_auto] items-end gap-5">
         <div>
           <div className="mb-1.5 border-b border-ink/30 pb-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink/70">
-            Beyond work
+            Leadership
           </div>
           <Region id="text" active={active} onHover={onHover}>
             <p className="text-[9.5px] leading-snug text-ink/80">
-              Competitive programming on CodeChef and LeetCode. Hackathons too, including a win at Ganglia Tech.
+              President, Data Science &amp; AI Society. Club Lead, InQuizitive quiz club. Competitive programming on CodeChef and LeetCode.
             </p>
             <div className="mt-2 space-y-1.5">
               {bar('92%')}
@@ -197,7 +197,7 @@ const logLines = [
   { t: '✓ layout_det    6 regions       42ms', c: 'text-muted' },
   { t: '✓ ocr           1,204 tokens    88ms', c: 'text-muted' },
   { t: '✓ vlm_extract   schema=portfolio.v2  conf=0.97', c: 'text-muted' },
-  { t: '✓ embed         18 entities → latent space', c: 'text-muted' },
+  { t: `✓ embed         ${mapItems.length} entities → latent space`, c: 'text-muted' },
   { t: '→ scroll to run the pipeline ↓', c: 'text-cyan' },
 ];
 

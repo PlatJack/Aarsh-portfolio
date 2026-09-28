@@ -10,7 +10,7 @@ const EmbedMap = dynamic(() => import('./EmbedMap'), {
   ssr: false,
   loading: () => (
     <div className="grid h-full place-items-center font-mono text-xs text-faint">
-      <span className="caret">projecting 18 entities into latent space</span>
+      <span className="caret">projecting {mapItems.length} entities into latent space</span>
     </div>
   ),
 });
@@ -62,10 +62,7 @@ export function Embed() {
 
   return (
     <section id="embed" className="relative mx-auto max-w-6xl scroll-mt-20 px-5 py-20 sm:py-28">
-      <StageHeader index={3} stage="Embed" accent="#a78bfa" title={<>A map of everything I’ve worked on.</>}>
-        Papers, projects, roles and honours, grouped by theme into one space. Drag to orbit, pick a cluster to
-        focus, click any node.
-      </StageHeader>
+      <StageHeader index={3} stage="Embed" accent="#a78bfa" title={<>A map of everything I’ve worked on.</>} />
 
       <div ref={wrap} id="embed-map" className="reveal relative h-[64vh] min-h-[480px] sm:h-[78vh] sm:min-h-[520px] overflow-hidden rounded-3xl border border-line bg-[radial-gradient(ellipse_at_center,#0f1216_0%,#060708_70%)]">
         {mounted && (
@@ -156,6 +153,7 @@ export function Embed() {
                 </div>
                 <p className="mt-3 text-[13px] leading-relaxed text-faint">{highlightMe(pub.authors)}</p>
                 <p className="mt-1.5 font-serif text-[15px] italic text-muted">{pub.venue}</p>
+                {pub.note && <p className="mt-1 font-mono text-[11px] text-faint">{pub.note}</p>}
               </Card>
             );
           })}
@@ -163,32 +161,41 @@ export function Embed() {
       </div>
 
       <div className="mt-24">
-        <h3 className="reveal mb-8 font-mono text-xs uppercase tracking-[0.25em] text-violet">Selected projects</h3>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {projects.map((p, i) => (
+        <h3 className="reveal mb-8 font-mono text-xs uppercase tracking-[0.25em] text-violet">Project</h3>
+        <div className="space-y-4">
+          {projects.map(p => (
             <a
               key={p.title}
               href={p.url}
               target="_blank"
               rel="noreferrer"
-              className="spot reveal group flex flex-col rounded-2xl border border-line bg-surface/70 p-5 transition-transform hover:-translate-y-1"
+              className="spot reveal group grid gap-6 rounded-2xl border border-line bg-surface/70 p-6 transition-transform hover:-translate-y-1 sm:p-8 md:grid-cols-[1fr_1.2fr]"
             >
-              <div className="flex items-center justify-between font-mono text-[10.5px] text-faint">
-                <span>proj_{String(i + 1).padStart(2, '0')}</span>
-                <span className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan">↗</span>
+              <div>
+                <div className="flex items-center gap-3 font-mono text-[10.5px] uppercase tracking-wider text-faint">
+                  {p.date && <span>{p.date}</span>}
+                  <span className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan">github ↗</span>
+                </div>
+                <div className="mt-3 text-2xl font-semibold leading-tight tracking-tight">{p.title}</div>
+                <p className="mt-3 leading-relaxed text-muted">{p.description}</p>
+                <div className="mt-5 flex flex-wrap gap-1.5">
+                  {p.tags.map(t => (
+                    <span key={t} className="rounded-md border border-violet/25 bg-violet/[0.06] px-2 py-0.5 font-mono text-[11px] text-violet/90">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="mt-4 font-medium leading-snug">{p.title}</div>
-              {p.highlight && (
-                <span className="mt-2 w-fit rounded-md bg-lime/15 px-2 py-0.5 font-mono text-[10.5px] text-lime">{p.highlight}</span>
+              {p.points && (
+                <ul className="space-y-2.5 self-center text-[15px] leading-relaxed text-muted">
+                  {p.points.map(pt => (
+                    <li key={pt} className="grid grid-cols-[14px_1fr] gap-2">
+                      <span className="mt-[9px] h-px w-2.5 bg-violet/60" aria-hidden />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
               )}
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{p.description}</p>
-              <div className="mt-4 flex flex-wrap gap-1">
-                {p.tags.slice(0, 4).map(t => (
-                  <span key={t} className="font-mono text-[10.5px] text-faint">
-                    #{t.toLowerCase().replace(/\s+/g, '-')}
-                  </span>
-                ))}
-              </div>
             </a>
           ))}
         </div>
